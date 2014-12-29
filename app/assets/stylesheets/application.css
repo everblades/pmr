@@ -18,6 +18,11 @@
 /**********************
 GENERAL
 **********************/
+
+body {
+    background: #F7F7F7;
+}
+
 a:link{
     color: #000000;
     text-decoration: none;
@@ -34,12 +39,17 @@ a:hover{
 a:active{
     color: #ffffff;
 }
+
+
+
+
 /**********************
 HEADER
 **********************/
+
 header {
-    max-width: 90%;
-    height: 110px;
+    width: 90%;
+    height: 12%;
     background: #689D68;
     margin: 0 auto;
     padding: 0;
@@ -82,7 +92,7 @@ NAVIGATION BAR
 
 nav {
     background: #428442;
-    max-width: 90%;
+    width: 90%;
     margin: 0 auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -98,4 +108,50 @@ nav li {
     display: inline-block;
     font-weight: bold;
     padding: 10px;
+}
+
+
+
+
+/**********************
+CONTENT
+**********************/
+
+.contentcontainer {
+    width: 60%;
+    background: #E0F8E0;
+    border-radius: 10px;
+    margin: 1% 0 2% 5%;
+    padding: 1%;
+    float: left;
+}
+
+
+/**********************
+SIDEBAR
+**********************/
+
+aside {
+    width: 25%;
+    background: #CEE3F6;
+    float: right;
+    margin: 1% 5% 2% 1%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+
+
+/**********************
+FOOTER
+**********************/
+
+footer {
+    width: 90%;
+    margin: 2% auto 0 auto;
+    padding: 1%;
+    background: #CCCCCC;
+    clear: both;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

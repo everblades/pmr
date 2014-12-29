@@ -2,21 +2,26 @@
 
 <% @title= @post.title %>
 
-<p id="title">
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    <% if @post.photo? %>
+      <%= image_tag @post.photo.url(:medium) %>
+    <% end %>
 
-<p id="Author">
-  <strong>By:</strong>
-  <%= @post.user.username %>
-</p>
+    <p id="title">
+      <strong>Title:</strong>
+      <%= @post.title %>
+    </p>
 
-<p id="body">
-  <%= sanitize @post.body %>
-</p>
+    <p id="date">
+      <strong>Date Posted:</strong> <%=@post.created_at.to_date; %>
+    </p>
 
-<% if @post.photo? %>
-<%= image_tag @post.photo.url(:thumb) %>
-<% end %>
+    <p id="Author">
+      <strong>By:</strong>
+      <%= @post.user.username %>
+    </p>
+
+    <p id="body">
+      <%= sanitize @post.body %>
+    </p>
+
 
