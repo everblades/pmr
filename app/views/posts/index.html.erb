@@ -1,0 +1,14 @@
+<% @title= 'Blog' %>
+<p>Blog</p>
+
+<% @posts.each do |post| %>
+  <% if post.photo? %>
+    <%= image_tag post.photo.url(:thumb) %><br>
+  <% end %>
+  <%= link_to(post.title, post_path(post)) %><br>
+  Date: <%= post.created_at %><br>
+  By: <%= post.user.username %><br>
+  <%= post.excerpt %><br>
+  <br>
+<% end %>
+

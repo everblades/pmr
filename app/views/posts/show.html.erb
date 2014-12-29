@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<% @title= @post.title %>
+
+<p id="title">
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p id="Author">
+  <strong>By:</strong>
+  <%= @post.user.username %>
+</p>
+
+<p id="body">
+  <%= sanitize @post.body %>
+</p>
+
+<% if @post.photo? %>
+<%= image_tag @post.photo.url(:thumb) %>
+<% end %>
+

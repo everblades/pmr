@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <% if @title %>
+    <%= @title %> | PreMed Roadmap
+    <% else %>
+    PreMed Roadmap: Find Your Path to Medical School
+    <% end %>
+    </title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<header>
+  <ul>
+    <% if !user_signed_in? %>
+        <li><%= link_to('Register', new_user_registration_path)  %></li>
+        <li><%= link_to('Login', new_user_session_path)  %></li>
+    <% end %>
+    <% if user_signed_in? %>
+        <li><%= link_to('Account Settings', edit_user_registration_path) %></li>
+        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    <% end %>
+  </ul>
+  <%= image_tag('premedroadmaplogo3.png', :alt =>'PreMed Roadmap Logo') %>
+  <p id="headtext">Find Your Path<br> to Medical School</p>
+</header>
+
+<nav>
+  <ul>
+    <li><%= link_to('High School', page_path(1)) %></li>
+    <li>College</li>
+    <li>Applying</li>
+    <li>Alternatives</li>
+    <li>Careers</li>
+    <li><%= link_to('Blog', posts_path) %></li>
+    <li><%= link_to('Contact', contact_path) %></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+<footer>
+  &copy; PreMed Roadmap
+</footer>
+</body>
+</html>
