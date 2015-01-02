@@ -4,9 +4,8 @@
     <data-source source="LOCAL" name="Rails pmr: development" uuid="04d28dc4-cc0b-4ec1-9115-108519c60e5f">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql:pmr_development</jdbc-url>
       <libraries />
     </data-source>
   </component>
 </project>
-
