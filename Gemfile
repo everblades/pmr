@@ -48,3 +48,5 @@ gem 'devise'
 gem 'paperclip', '~> 4.2'
 
 gem 'rails_12factor'
+
+gem 'friendly_id', '~> 5.1.0'

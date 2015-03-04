@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index, :home]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /pages
@@ -13,9 +13,6 @@ class PagesController < ApplicationController
 
   end
 
-  def highschool
-
-  end
   # GET /pages/1
   # GET /pages/1.json
   def show
@@ -79,7 +76,7 @@ class PagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
-      @page = Page.find(params[:id])
+      @page = Page.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
