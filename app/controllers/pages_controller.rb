@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :home]
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /pages
@@ -13,6 +13,9 @@ class PagesController < ApplicationController
 
   end
 
+  def highschool
+
+  end
   # GET /pages/1
   # GET /pages/1.json
   def show
