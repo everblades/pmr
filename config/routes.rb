@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/blog' => redirect('posts#show')
   get 'contact' => 'pages#contact', as: 'contact'
   get 'posts' => 'posts#show'
+  get 'pages' => 'pages'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

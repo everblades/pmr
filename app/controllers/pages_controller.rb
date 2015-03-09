@@ -10,7 +10,6 @@ class PagesController < ApplicationController
   end
 
   def home
-
   end
 
   # GET /pages/1
