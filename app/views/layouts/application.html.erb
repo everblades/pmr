@@ -17,6 +17,7 @@
 <p class="alert"><%= alert %></p>
 
 <header>
+  <!--
   <ul>
     <% if !user_signed_in? %>
         <li><%= link_to('Register', new_user_registration_path)  %></li>
@@ -27,13 +28,14 @@
         <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
     <% end %>
   </ul>
+  -->
   <%= image_tag('premedroadmaplogo3.png', :alt =>'PreMed Roadmap Logo') %>
   <p id="headtext">Find Your Path<br> to Medical School</p>
 </header>
 
 <nav>
   <ul>
-    <li><%= link_to('High School', "http://localhost:3000/pages/high-school-to-medical-school") %></li>
+    <li><%= link_to('High School', 'http://localhost:3000/pages/high-school-to-medical-school') %></li>
     <li>College</li>
     <li>Applying</li>
     <li>Alternatives</li>

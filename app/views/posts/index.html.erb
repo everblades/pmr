@@ -14,5 +14,7 @@
     <br>
 
   <% end %>
-
+<div class="pagination">
+<%= will_paginate @posts, previous_label: "Newer", next_label: "Older", inner_window: 2, outer_window: 0 %>
+</div>
 
