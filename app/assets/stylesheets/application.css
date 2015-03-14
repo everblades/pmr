@@ -89,7 +89,6 @@ header li {
 }
 
 
-
 /**********************
 NAVIGATION BAR
 **********************/
@@ -247,11 +246,35 @@ aside {
 .adcontainer {
     width: 50%;
     margin: 0 auto;
+    text-align: center;
     text-decoration: underline;
+    clear: both;
+}
+
+.social {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.g-plusone {
+    display: block;
+    clear: both;
     text-align: center;
 }
 
+.facebook{
+    display: block;
+    clear: both;
+    text-align: center;
+}
 
+.twitter {
+    display: block;
+    clear: both;
+    text-align: center;
+}
 /**********************
 FOOTER
 **********************/

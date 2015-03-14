@@ -5,3 +5,18 @@
 <p>Use the navigation above to find your path to medical school.</p>
 
 <h2>Recent Blog Posts:</h2>
+
+<% @posts.each do |post| %>
+    <% if post.photo? %>
+        <%= image_tag post.photo.url(:thumb) %><br>
+    <% end %>
+
+    <%= link_to(post.title, post_path(post)) %><br>
+    Date: <%= post.created_at.strftime("%m/%d/%y") %><br>
+    By: <%= post.user.username %><br>
+    <%= post.excerpt %><br>
+    <br>
+
+<% end %>
+
+<%= link_to('More Posts', posts_path) %>

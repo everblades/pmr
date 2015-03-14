@@ -12,6 +12,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 <p class="notice"><%= notice %></p>
@@ -32,6 +33,7 @@
   -->
   <%= link_to(image_tag('premedroadmaplogo3.png', :alt =>'PreMed Roadmap Logo'), root_path) %>
   <p id="headtext"><%= link_to('Find Your Path<br> to Medical School'.html_safe, root_path) %></p>
+
 </header>
 
 <nav id="primary_nav">
@@ -81,6 +83,17 @@
 </section>
 
 <aside>
+    <div class="social">
+          <p>Google +1 Us</p>
+          <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="240"></div>
+        <div class="facbook">
+          <p>Like Us On Facebook</p>
+          <%= image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo') %></div>
+        <div class="twitter">
+          <p>Follow Us On Twitter</p>
+          <%= image_tag('Twitter_logo_white.png', :alt=> 'Twitter Logo') %></div>
+    </div>
+
   <div class="adcontainer">
       <p>Ads Support Our Site</p>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -97,5 +110,6 @@
 <footer>
   &copy; 2015 PreMed Roadmap
 </footer>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 </html>

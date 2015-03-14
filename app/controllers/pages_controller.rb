@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @posts = Post.limit(3).order('created_at DESC')
   end
 
   # GET /pages/1
