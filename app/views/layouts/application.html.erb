@@ -11,6 +11,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
 <p class="notice"><%= notice %></p>
@@ -29,17 +30,47 @@
     <% end %>
   </ul>
   -->
-  <%= image_tag('premedroadmaplogo3.png', :alt =>'PreMed Roadmap Logo') %>
+  <%= link_to(image_tag('premedroadmaplogo3.png', :alt =>'PreMed Roadmap Logo'), root_path) %>
   <p id="headtext">Find Your Path<br> to Medical School</p>
 </header>
 
-<nav>
+<nav id="primary_nav">
   <ul>
-    <li><%= link_to('High School', 'http://localhost:3000/pages/high-school-to-medical-school') %></li>
-    <li>College</li>
-    <li>Applying</li>
-    <li>Alternatives</li>
-    <li>Careers</li>
+    <li class="firstli"><%= link_to('High School &darr;'.html_safe, 'http://localhost:3000/pages/high-school-to-medical-school') %>
+        <ul>
+          <li>Is Medicine for Me?</li>
+          <li>High School Courses for Medical School</li>
+          <li>PreMed Colleges and Degrees</li>
+          <li>Seven Year Medical Programs</li>
+        </ul>
+    </li>
+    <li><%= link_to('College &darr;'.html_safe, 'http://localhost:3000/pages/pre-med') %>
+      <ul>
+        <li>Medical School Requirements</li>
+        <li>PreMed Majors and Courses</li>
+        <li>MCAT Prep Guide</li>
+        <li>What is Medical School Like?</li>
+      </ul>
+    </li>
+    <li><%= link_to('Applying &darr;'.html_safe, 'http://localhost:3000/pages/applying-to-medical-school') %>
+      <ul>
+        <li>Medical School Acceptance Statistics</li>
+        <li>How to Write a Personal Statement</li>
+        <li>Recommendation Letters</li>
+        <li>AMCAS Step by Step</li>
+        <li>Secondary Application Essays</li>
+        <li>Interview Guide</li>
+        <li>How to Choose a Medical School</li>
+      </ul>
+    </li>
+    <li><%= link_to('Alternatives &darr;'.html_safe, 'http://localhost:3000/pages/alternative-to-medical-school') %>
+      <ul>
+        <li>Should I Apply Again?</li>
+        <li>About Caribbean Medical Schools</li>
+        <li>About Osteopathic Medical Schools</li>
+      </ul>
+    </li>
+    <li><%= link_to('Careers', 'http://localhost:3000/pages/health-careers') %></li>
     <li><%= link_to('Blog', posts_path) %></li>
     <li><%= link_to('Contact', contact_path) %></li>
   </ul>

@@ -33,11 +33,13 @@ a:visited{
 }
 
 a:hover{
-    color: #ffffff;
+    color: #000000;
+    background: none;
 }
 
 a:active{
-    color: #ffffff;
+    color: #000000;
+    background: none;
 }
 
 
@@ -90,28 +92,102 @@ header li {
 NAVIGATION BAR
 **********************/
 
-nav {
-    background: #428442;
-    width: 90%;
-    margin: 0 auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+
+@media only screen and (min-width : 760px){
+
+    nav {
+        background: #428442;
+        width: 90%;
+        margin: 0 auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav ul {
+        text-align: left;
+        display: inline;
+        margin: 0;
+        padding: 15px 4px 17px 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        font: bold 12px/18px sans-serif;
+        display: inline-block;
+        margin-right: -4px;
+        position: relative;
+        padding: 15px 20px;
+        background: #428442;
+        cursor: pointer;
+    }
+
+    nav ul li:hover {
+        background: #CEE3F6;
+        color: #000;
+    }
+
+    nav ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 250px;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav ul li ul li {
+        background: #428442;
+        display: block;
+        color: #000;
+        border: 1px solid #E0F8E0;
+    }
+
+    nav ul li ul li:hover {
+        background: #CEE3F6;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul ul {
+        position: absolute; left: 100%; top:0;
+    }
+
+    .firstli {
+        margin-left: 20px;
+    }
+
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0 auto;
-    width: 100%;
+
+@media only screen and (max-width : 760px) {
+    nav {
+        background: #428442;
+        width: 90%;
+        margin: 0 auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav ul {
+        margin: 0 10px;
+        padding: 15px 4px 17px 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        font: bold 12px/18px sans-serif;
+        padding: 5px 7px;
+        background: #428442;
+        cursor: pointer;
+    }
+
 }
-
-nav li {
-    display: inline-block;
-    font-weight: bold;
-    padding: 10px;
-}
-
-
-
 
 /**********************
 CONTENT

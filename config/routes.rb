@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get 'contact' => 'pages#contact', as: 'contact'
   get 'posts' => 'posts#show'
   get 'pages' => 'pages'
+  get '/high-school-to-medical-school' => redirect('pages/high-school-to-medical-school')
+  get '/pre-med' => redirect('pages/pre-med')
+  get '/applying-to-medical-school' => redirect('/pages/applying-to-medical-school')
+  get '/alternative-to-medical-school' => redirect('pages/alternative-to-medical-school')
+  get '/health-careers' => redirect('pages/health-careers')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
