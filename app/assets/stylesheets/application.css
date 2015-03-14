@@ -24,25 +24,27 @@ body {
 }
 
 a:link{
-    color: #000000;
+    color: #0000FF;
     text-decoration: none;
 }
 
 a:visited{
-    color: #000000;
+    color: #800080;
 }
 
 a:hover{
-    color: #000000;
+    color: #FF0000;
     background: none;
 }
 
 a:active{
-    color: #000000;
+    color: #800080;
     background: none;
 }
 
-
+#headtext a {
+    color: #FFFFFF;
+}
 
 
 /**********************
@@ -91,7 +93,24 @@ header li {
 /**********************
 NAVIGATION BAR
 **********************/
+nav a:link{
+    color: #000000;
+    text-decoration: none;
+}
 
+nav a:visited{
+    color: #000000;
+}
+
+nav a:hover{
+    color: #000000;
+    background: none;
+}
+
+nav a:active{
+    color: #000000;
+    background: none;
+}
 
 @media only screen and (min-width : 760px){
 
@@ -116,9 +135,13 @@ NAVIGATION BAR
         display: inline-block;
         margin-right: -4px;
         position: relative;
-        padding: 15px 20px;
         background: #428442;
         cursor: pointer;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        display: block;
     }
 
     nav ul li:hover {
@@ -187,6 +210,11 @@ NAVIGATION BAR
         cursor: pointer;
     }
 
+    nav ul li a {
+        padding: 15px 20px;
+        display: block;
+    }
+
 }
 
 /**********************
@@ -216,6 +244,12 @@ aside {
     padding: 1%;
 }
 
+.adcontainer {
+    width: 50%;
+    margin: 0 auto;
+    text-decoration: underline;
+    text-align: center;
+}
 
 
 /**********************

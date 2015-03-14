@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :pages
   resources :posts
+  resources "contacts", only: [:new, :create]
 
   root to: 'pages#home'
 
   get '/blog' => redirect('posts#show')
-  get 'contact' => 'pages#contact', as: 'contact'
   get 'posts' => 'posts#show'
   get 'pages' => 'pages'
   get '/high-school-to-medical-school' => redirect('pages/high-school-to-medical-school')
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/applying-to-medical-school' => redirect('/pages/applying-to-medical-school')
   get '/alternative-to-medical-school' => redirect('pages/alternative-to-medical-school')
   get '/health-careers' => redirect('pages/health-careers')
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

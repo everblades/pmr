@@ -6,17 +6,16 @@
       <%= image_tag @post.photo.url(:medium) %>
     <% end %>
 
-    <p id="title">
-      <strong>Title:</strong>
+    <h1>
       <%= @post.title %>
-    </p>
+    </h1>
 
     <p id="date">
-      <strong>Date Posted:</strong> <%=@post.created_at.to_date; %>
+      <strong>Date Posted:</strong> <%=@post.created_at.strftime("%m/%d/%y") %>
     </p>
 
     <p id="Author">
-      <strong>By:</strong>
+      <strong>Author:</strong>
       <%= @post.user.username %>
     </p>
 
