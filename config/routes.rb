@@ -7,13 +7,64 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/blog' => redirect('posts#show')
-  get 'posts' => 'posts#show'
-  get 'pages' => 'pages'
-  get '/high-school-to-medical-school' => redirect('pages/high-school-to-medical-school')
+  get '/posts' => 'posts#show'
+
+  get '/high-school-to-medical-school' => redirect('/pages/high-school-to-medical-school')
+  get '/high-school-to-medical-school/is-medicine-for-me' => redirect('/pages/is-medicine-for-me')
+  get '/high-school-to-medical-school/high-school-courses-for-medical-school' => redirect('/pages/high-school-courses-for-medical-school')
+  get '/high-school-to-medical-school/pre-med-colleges-degrees' => redirect('/pages/pre-med-colleges-degrees')
+  get '/high-school-to-medical-school/seven-year-medical-programs' => redirect('/pages/seven-year-medical-programs')
+
   get '/pre-med' => redirect('pages/pre-med')
+  get '/pre-med/pre-med-major-and-courses' => redirect('/pages/pre-med-major-and-courses')
+  get '/pre-med/mcat-prep' => redirect('/pages/mcat-prep')
+  get '/pre-med/mcat-prep/write-mcat-writing-essays' => redirect('/pages/write-mcat-writing-essays')
+  get '/pre-med/what-is-medical-school-like-student' => redirect('/pages/what-is-medical-school-like-student')
+
   get '/applying-to-medical-school' => redirect('/pages/applying-to-medical-school')
-  get '/alternative-to-medical-school' => redirect('pages/alternative-to-medical-school')
-  get '/health-careers' => redirect('pages/health-careers')
+  get '/applying-to-medical-school/medical-school-requirements' => redirect('/pages/medical-school-requirements')
+  get '/applying-to-medical-school/medical-school-statistics' => redirect('/pages/medical-school-statistics')
+  get '/applying-to-medical-school/how-to-write-a-medical-school-personal-statement' => redirect('/pages/how-to-write-a-medical-school-personal-statement')
+  get '/applying-to-medical-school/how-to-write-a-medical-school-personal-statement/medical-school-personal-statement-example' => redirect('/pages/medical-school-personal-statement-example')
+  get '/applying-to-medical-school/medical-school-recommendation-letters' => redirect('/pages/medical-school-recommendation-letters')
+  get '/applying-to-medical-school/amcas-medical-school-application' => redirect('/pages/applying-to-medical-school/amcas-medical-school-application')
+  get '/applying-to-medical-school/medical-school-secondary-application-essays' => redirect('/pages/medical-school-secondary-application-essays')
+  get '/applying-to-medical-school/medical-school-interview' => redirect('/pages/medical-school-interview')
+  get '/applying-to-medical-school/how-to-choose-a-medical-school' => redirect('/pages/how-to-choose-a-medical-school')
+  get '/applying-to-medical-school/list-of-accredited-medical-schools' => redirect('/pages/list-of-accredited-medical-schools')
+
+
+  get '/alternative-to-medical-school' => redirect('/pages/alternative-to-medical-school')
+  get '/alternative-to-medical-school/reapplying-to-medical-school' => redirect('/pages/reapplying-to-medical-school')
+  get '/alternative-to-medical-school/caribbean-medical-schools' => redirect('/pages/caribbean-medical-schools')
+  get '/alternative-to-medical-school/caribbean-medical-schools/list-of-accredited-caribbean-medical-schools' => redirect('/pages/list-of-accredited-caribbean-medical-schools')
+  get '/alternative-to-medical-school/osteopathic-medical-schools-and-what-is-osteopathy' => redirect('/pages/osteopathic-medical-schools-and-what-is-osteopathy')
+  get '/alternative-to-medical-school/osteopathic-medical-schools-and-what-is-osteopathy/list-of-accredited-osteopathic-medical-schools' => redirect('/pages/list-of-accredited-osteopathic-medical-schools')
+
+  get '/health-careers' => redirect('/pages/health-careers')
+  get '/health-careers/allergy-and-immunology' => redirect('/pages/allergy-and-immunology')
+  get '/health-careers/anesthesiology-career-guide' => redirect('/pages/anesthesiology-career-guide')
+  get '/health-careers/cardiology' => redirect('/pages/cardiology')
+  get '/health-careers/dermatology-career-guide' => redirect('/pages/dermatology-career-guide')
+  get '/health-careers/emergency-medicine-career-guide' => redirect('/pages/emergency-medicine-career-guide')
+  get '/health-careers/endocrinology-career-guide' => redirect('/pages/endocrinology-career-guide')
+  get '/health-careers/family-medicine-career-guide' => redirect('/pages/family-medicine-career-guide')
+  get '/health-careers/gastroenterology-career-guide' => redirect('/pages/gastroenterology-career-guide')
+  get '/health-careers/general-surgery-career-guide' => redirect('/pages/general-surgery-career-guide')
+  get '/health-careers/internal-medicine-career-guide' => redirect('/pages/internal-medicine-career-guide')
+  get '/health-careers/medical-geneticist-career-guide' => redirect('/pages/medical-geneticist-career-guide')
+  get '/health-careers/nephrology-career-guide' => redirect('/pages/nephrology-career-guide')
+  get '/health-careers/neurology-career-guide' => redirect('/pages/neurology-career-guide')
+  get '/health-careers/nuclear-medicine-career-guide' => redirect('/pages/nuclear-medicine-career-guide')
+  get '/health-careers/obstetrics-gynecology-career-guide' => redirect('/pages/obstetrics-gynecology-career-guide')
+  get '/health-careers/oncology-career-guide' => redirect('/pages/oncology-career-guide')
+  get '/health-careers/ophthalmology-career-guide' => redirect('/pages/ophthalmology-career-guide')
+  get '/health-careers/orthopedic-surgery-career-guide' => redirect('/pages/orthopedic-surgery-career-guide')
+  get '/health-careers/otolaryngology-career-guide' => redirect('/pages/otolaryngology-career-guide')
+  get '/health-careers/pathology-career-guide' => redirect('/pages/pathology-career-guide')
+  get '/health-careers/pediatrics-career-guide' => redirect('/pages/pediatrics-career-guide')
+  get '/health-careers/pulmonology-career-guide' => redirect('/pages/pulmonology-career-guide')
+
   match '/contacts',     to: 'contacts#new',             via: 'get'
 
 
