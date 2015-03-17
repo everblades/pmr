@@ -36,80 +36,84 @@
 
 </header>
 
-<nav id="primary_nav">
-  <ul>
-    <li class="firstli"><%= link_to('Home', root_path) %></li>
-    <li><%= link_to('High School &darr;'.html_safe, 'http://localhost:3000/pages/high-school-to-medical-school') %>
-        <ul>
-          <li><%= link_to('Is Medicine for Me?', 'http://localhost:3000/pages/is-medicine-for-me') %></li>
-          <li><%= link_to('High School Courses for Medical School', 'http://localhost:3000/pages/high-school-courses-for-medical-school') %></li>
-          <li><%= link_to('PreMed Colleges and Degrees', 'http://localhost:3000/pages/premed-colleges-degrees') %></li>
-          <li><%= link_to('Seven Year Medical Programs', 'http://localhost:3000/pages/seven-year-medical-programs') %></li>
-        </ul>
-    </li>
-    <li><%= link_to('College &darr;'.html_safe, 'http://localhost:3000/pages/pre-med') %>
+    <nav id="primary_nav">
       <ul>
-        <li><%= link_to('Medical School Requirements', 'http://localhost:3000/pages/medical-school-requirements') %></li>
-        <li><%= link_to('PreMed Majors and Courses', 'http://localhost:3000/pages/pre-med-major-and-courses') %></li>
-        <li><%= link_to('MCAT Prep Guide', 'http://localhost:3000/pages/mcat-prep') %></li>
+        <li class="firstli"><%= link_to('Home', root_path) %></li>
+        <li><%= link_to('High School &darr;'.html_safe, 'http://localhost:3000/pages/high-school-to-medical-school') %>
+            <ul>
+              <li><%= link_to('Is Medicine for Me?', 'http://localhost:3000/pages/is-medicine-for-me') %></li>
+              <li><%= link_to('High School Courses for Medical School', 'http://localhost:3000/pages/high-school-courses-for-medical-school') %></li>
+              <li><%= link_to('PreMed Colleges and Degrees', 'http://localhost:3000/pages/premed-colleges-degrees') %></li>
+              <li><%= link_to('Seven Year Medical Programs', 'http://localhost:3000/pages/seven-year-medical-programs') %></li>
+            </ul>
+        </li>
+        <li><%= link_to('College &darr;'.html_safe, 'http://localhost:3000/pages/pre-med') %>
+          <ul>
+            <li><%= link_to('Medical School Requirements', 'http://localhost:3000/pages/medical-school-requirements') %></li>
+            <li><%= link_to('PreMed Majors and Courses', 'http://localhost:3000/pages/pre-med-major-and-courses') %></li>
+            <li><%= link_to('MCAT Prep Guide', 'http://localhost:3000/pages/mcat-prep') %></li>
+          </ul>
+        </li>
+        <li><%= link_to('Applying &darr;'.html_safe, 'http://localhost:3000/pages/applying-to-medical-school') %>
+          <ul>
+            <li><%= link_to('Medical School Acceptance Statistics', 'http://localhost:3000/pages/medical-school-statistics') %></li>
+            <li><%= link_to('How to Write a Personal Statement', 'http://localhost:3000/pages/how-to-write-a-medical-school-personal-statement') %></li>
+            <li><%= link_to('Recommendation Letters', 'http://localhost:3000/pages/medical-school-recommendation-letters') %></li>
+            <li><%= link_to('AMCAS Step by Step', 'http://localhost:3000/pages/amcas-medical-school-application') %></li>
+            <li><%= link_to('Secondary Application Essays', 'http://localhost:3000/pages/medical-school-secondary-application-essays') %></li>
+            <li><%= link_to('Interview Guide', 'http://localhost:3000/pages/medical-school-interview') %></li>
+            <li><%= link_to('How to Choose a Medical School', 'http://localhost:3000/pages/how-to-choose-a-medical-school') %></li>
+          </ul>
+        </li>
+        <li><%= link_to('Alternatives &darr;'.html_safe, 'http://localhost:3000/pages/alternative-to-medical-school') %>
+          <ul>
+            <li><%= link_to('Should I Apply Again?', 'http://localhost:3000/pages/reapplying-to-medical-school') %></li>
+            <li><%= link_to('About Caribbean Medical Schools', 'http://localhost:3000/pages/caribbean-medical-schools') %></li>
+            <li><%= link_to('About Osteopathic Medical Schools', 'http://localhost:3000/pages/osteopathic-medical-schools-and-what-is-osteopathy') %></li>
+          </ul>
+        </li>
+        <li><%= link_to('Careers', 'http://localhost:3000/pages/health-careers') %></li>
+        <li><%= link_to('Blog', posts_path) %></li>
+        <li><%= link_to('Contact', contacts_path) %></li>
       </ul>
-    </li>
-    <li><%= link_to('Applying &darr;'.html_safe, 'http://localhost:3000/pages/applying-to-medical-school') %>
-      <ul>
-        <li><%= link_to('Medical School Acceptance Statistics', 'http://localhost:3000/pages/medical-school-statistics') %></li>
-        <li><%= link_to('How to Write a Personal Statement', 'http://localhost:3000/pages/how-to-write-a-medical-school-personal-statement') %></li>
-        <li><%= link_to('Recommendation Letters', 'http://localhost:3000/pages/medical-school-recommendation-letters') %></li>
-        <li><%= link_to('AMCAS Step by Step', 'http://localhost:3000/pages/amcas-medical-school-application') %></li>
-        <li><%= link_to('Secondary Application Essays', 'http://localhost:3000/pages/medical-school-secondary-application-essays') %></li>
-        <li><%= link_to('Interview Guide', 'http://localhost:3000/pages/medical-school-interview') %></li>
-        <li><%= link_to('How to Choose a Medical School', 'http://localhost:3000/pages/how-to-choose-a-medical-school') %></li>
-      </ul>
-    </li>
-    <li><%= link_to('Alternatives &darr;'.html_safe, 'http://localhost:3000/pages/alternative-to-medical-school') %>
-      <ul>
-        <li><%= link_to('Should I Apply Again?', 'http://localhost:3000/pages/reapplying-to-medical-school') %></li>
-        <li><%= link_to('About Caribbean Medical Schools', 'http://localhost:3000/pages/caribbean-medical-schools') %></li>
-        <li><%= link_to('About Osteopathic Medical Schools', 'http://localhost:3000/pages/osteopathic-medical-schools-and-what-is-osteopathy') %></li>
-      </ul>
-    </li>
-    <li><%= link_to('Careers', 'http://localhost:3000/pages/health-careers') %></li>
-    <li><%= link_to('Blog', posts_path) %></li>
-    <li><%= link_to('Contact', contacts_path) %></li>
-  </ul>
-</nav>
+    </nav>
 
-<section class="contentcontainer">
-    <%= yield %>
-</section>
+<div id="page">
+    <article>
+        <%= yield %>
+    </article>
 
-<aside>
-    <div class="social">
-          <p>Google +1 Us</p>
-          <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="240"></div>
-        <div class="facbook">
-          <p>Like Us On Facebook</p>
-          <%= image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo') %></div>
-        <div class="twitter">
-          <p>Follow Us On Twitter</p>
-          <%= image_tag('Twitter_logo_white.png', :alt=> 'Twitter Logo') %></div>
-    </div>
+    <aside>
+        <div class="social">
+              <p>Google +1 Us</p>
+              <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="240"></div>
+            <div class="facbook">
+              <p>Like Us On Facebook</p>
+              <%= link_to(image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo'), 'https://www.facebook.com/premedroadmap', :target => '_blank') %></div>
+            <div class="twitter">
+              <p>Follow Us On Twitter</p>
+              <%= link_to(image_tag('Twitter_logo_white.png', :alt=> 'Twitter Logo'), 'https://twitter.com/premedroadmap', :target => '_blank') %></div>
+        </div>
+        <% unless current_page?(root_path) %>
+          <div class="adcontainer">
+              <p>Ads Support Our Site</p>
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- side -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:160px;height:600px"
+                   data-ad-client="ca-pub-0527139808773078"
+                   data-ad-slot="0715419408"></ins>
+              <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+          </div>
+              <% end %>
+    </aside>
+</div>
+    <footer>
+      &copy; 2015 PreMed Roadmap
+    </footer>
 
-  <div class="adcontainer">
-      <p>Ads Support Our Site</p>
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- side -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:160px;height:600px"
-           data-ad-client="ca-pub-0527139808773078"
-           data-ad-slot="0715419408"></ins>
-      <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-  </div>
-</aside>
-<footer>
-  &copy; 2015 PreMed Roadmap
-</footer>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 </html>

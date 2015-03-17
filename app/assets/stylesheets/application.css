@@ -21,6 +21,19 @@ GENERAL
 
 body {
     background: #F7F7F7;
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+}
+
+#page {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
 }
 
 a:link{
@@ -57,8 +70,7 @@ header {
     background: #689D68;
     margin: 0 auto;
     padding: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 }
 
 header img {
@@ -111,14 +123,13 @@ nav a:active{
     background: none;
 }
 
-@media only screen and (min-width : 760px){
+
 
     nav {
         background: #428442;
         width: 90%;
         margin: 0 auto;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 10px;
     }
 
     nav ul {
@@ -184,7 +195,7 @@ nav a:active{
         margin-left: 20px;
     }
 
-}
+
 
 
 @media only screen and (max-width : 760px) {
@@ -220,13 +231,15 @@ nav a:active{
 CONTENT
 **********************/
 
-.contentcontainer {
-    width: 60%;
+article {
     background: #E0F8E0;
     border-radius: 10px;
     margin: 1% 0 2% 5%;
     padding: 1%;
-    float: left;
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 2;
 }
 
 
@@ -235,9 +248,11 @@ SIDEBAR
 **********************/
 
 aside {
-    width: 25%;
+    -webkit-flex: 1 6 20%;
+    flex: 1 6 20%;
+    -webkit-order: 3;
+    order: 3;
     background: #CEE3F6;
-    float: right;
     margin: 1% 5% 2% 1%;
     border-radius: 10px;
     padding: 1%;
@@ -280,6 +295,7 @@ FOOTER
 **********************/
 
 footer {
+    display: block;
     width: 90%;
     margin: 2% auto 0 auto;
     padding: 1%;
