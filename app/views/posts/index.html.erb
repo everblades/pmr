@@ -11,6 +11,8 @@
     Date: <%= post.created_at.strftime("%m/%d/%y") %><br>
     By: <%= post.user.username %><br>
     <%= post.excerpt %><br>
+    <%= link_to('Read More', post_path(post)) %>
+    <br>
     <br>
 
   <% end %>
