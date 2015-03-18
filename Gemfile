@@ -58,3 +58,5 @@ gem 'mail_form'
 gem 'simple_form'
 
 gem 'rack-zippy'
+
+gem 'newrelic_rpm'
