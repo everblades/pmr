@@ -56,3 +56,5 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'mail_form'
 
 gem 'simple_form'
+
+gem 'rack-zippy'
