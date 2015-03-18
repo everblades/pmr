@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get '/pre-med/mcat-prep' => redirect('/pages/mcat-prep')
   get '/pre-med/mcat-prep/write-mcat-writing-essays' => redirect('/pages/write-mcat-writing-essays')
   get '/pre-med/what-is-medical-school-like-student' => redirect('/pages/what-is-medical-school-like-student')
+  get '/pages/pre-med-colleges-degrees' => redirect('/pages/premed-colleges-degrees')
 
   get '/applying-to-medical-school' => redirect('/pages/applying-to-medical-school')
   get '/applying-to-medical-school/medical-school-requirements' => redirect('/pages/medical-school-requirements')
