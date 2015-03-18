@@ -126,6 +126,39 @@ nav a:active{
 
 
 
+
+
+nav {
+    background: #428442;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav ul {
+    margin: 0 10px;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+}
+
+nav ul li {
+    font: bold 12px/18px sans-serif;
+    padding: 5px 7px;
+    background: #428442;
+    cursor: pointer;
+}
+
+nav ul li a {
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li ul {
+    display: none;
+}
+
+@media only screen and (min-width : 760px) {
     nav {
         background: #428442;
         width: 90%;
@@ -195,36 +228,6 @@ nav a:active{
 
     .firstli {
         margin-left: 20px;
-    }
-
-
-
-
-@media only screen and (max-width : 760px) {
-    nav {
-        background: #428442;
-        width: 90%;
-        margin: 0 auto;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
-    nav ul {
-        margin: 0 10px;
-        padding: 15px 4px 17px 0;
-        list-style: none;
-    }
-
-    nav ul li {
-        font: bold 12px/18px sans-serif;
-        padding: 5px 7px;
-        background: #428442;
-        cursor: pointer;
-    }
-
-    nav ul li a {
-        padding: 15px 20px;
-        display: block;
     }
 
 }
