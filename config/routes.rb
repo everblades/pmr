@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   resources :posts
   resources "contacts", only: [:new, :create]
 
+  if Rails.env.production?
+    constraints(:host => /^(?!myfancyapp\.com)/i) do
+      match "/(*path)" => redirect {
+           |params, req| "http://myfancyapp.com/#{params[:path]}"
+       },  via: [:get, :post]
+    end
+  end
+
   get '/sitemap.xml.gz' => 'sitemaps#show'
 
   root to: 'pages#home'
