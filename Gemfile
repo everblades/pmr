@@ -60,3 +60,7 @@ gem 'simple_form'
 gem 'rack-zippy'
 
 gem 'newrelic_rpm'
+
+gem 'sitemap_generator'
+
+gem 'fog'
