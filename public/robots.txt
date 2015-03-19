@@ -4,4 +4,4 @@
 # User-agent: *
 # Disallow: /
 
-Sitemap: http://www.premedroadmap.com/sitemap1.xml.gz
+Sitemap: http://www.premedroadmap.com/sitemap.xml.gz
