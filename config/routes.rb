@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :posts
   resources "contacts", only: [:new, :create]
 
+  get '/sitemap.xml.gz' => 'sitemaps#show'
+
   root to: 'pages#home'
 
   get '/blog' => redirect('posts#show')
