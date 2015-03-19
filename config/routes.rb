@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   if Rails.env.production?
-    constraints(:host => /^(?!premedroadmap\.com)/i) do
+    constraints(:host => /^(?!www.premedroadmap\.com)/i) do
       match "/(*path)" => redirect {
            |params, req| "http://www.premedroadmap.com/#{params[:path]}"
        },  via: [:get, :post]
