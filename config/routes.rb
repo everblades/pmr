@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   get '/high-school-to-medical-school' => redirect('/pages/high-school-to-medical-school')
   get '/high-school-to-medical-school/is-medicine-for-me' => redirect('/pages/is-medicine-for-me')
   get '/high-school-to-medical-school/high-school-courses-for-medical-school' => redirect('/pages/high-school-courses-for-medical-school')
-  get '/high-school-to-medical-school/pre-med-colleges-degrees' => redirect('/pages/pre-med-colleges-degrees')
+  get '/high-school-to-medical-school/pre-med-colleges-degrees' => redirect('/pages/premed-colleges-degrees')
   get '/high-school-to-medical-school/seven-year-medical-programs' => redirect('/pages/seven-year-medical-programs')
 
   get '/pre-med' => redirect('pages/pre-med')
