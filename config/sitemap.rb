@@ -37,13 +37,13 @@ SitemapGenerator::Sitemap.create do
         add pages_path(page), :lastmod => page.updated_at
       end
 
-      add '/blog', :priority => .7, :changefreq => 'daily'
+      add '/blog', :priority => 0.7, :changefreq => 'daily'
 
       Post.find_each do |post|
-        add posts_path(post), :lastmod => post.updated_at, :changefreq => 'daily'
+        add posts_path(post), :lastmod => post.updated_at, :priority => 1, :changefreq => 'daily'
       end
 
-      add '/contacts', :priority => .1, :changefreq => 'monthly'
+      add '/contacts', :priority => 0.1, :changefreq => 'monthly'
 end
 
 SitemapGenerator::Sitemap.ping_search_engines
