@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   get '/applying-to-medical-school/medical-school-interview' => redirect('/pages/medical-school-interview')
   get '/applying-to-medical-school/how-to-choose-a-medical-school' => redirect('/pages/how-to-choose-a-medical-school')
   get '/applying-to-medical-school/list-of-accredited-medical-schools' => redirect('/pages/list-of-accredited-medical-schools')
-
+  get '/accepted-to-medical-school/list-of-accredited-medical-schools' => redirect('/pages/list-of-accredited-medical-schools')
 
   get '/alternative-to-medical-school' => redirect('/pages/alternative-to-medical-school')
   get '/alternative-to-medical-school/reapplying-to-medical-school' => redirect('/pages/reapplying-to-medical-school')
