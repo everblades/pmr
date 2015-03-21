@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   get '/applying-to-medical-school/how-to-write-a-medical-school-personal-statement' => redirect('/pages/how-to-write-a-medical-school-personal-statement')
   get '/applying-to-medical-school/how-to-write-a-medical-school-personal-statement/medical-school-personal-statement-example' => redirect('/pages/medical-school-personal-statement-example')
   get '/applying-to-medical-school/medical-school-recommendation-letters' => redirect('/pages/medical-school-recommendation-letters')
-  get '/applying-to-medical-school/amcas-medical-school-application' => redirect('/pages/applying-to-medical-school/amcas-medical-school-application')
+  get '/applying-to-medical-school/amcas-medical-school-application' => redirect('/pages/amcas-medical-school-application')
   get '/applying-to-medical-school/medical-school-secondary-application-essays' => redirect('/pages/medical-school-secondary-application-essays')
   get '/applying-to-medical-school/medical-school-interview' => redirect('/pages/medical-school-interview')
   get '/applying-to-medical-school/how-to-choose-a-medical-school' => redirect('/pages/how-to-choose-a-medical-school')
