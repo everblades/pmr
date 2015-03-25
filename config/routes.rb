@@ -31,8 +31,8 @@ Rails.application.routes.draw do
   get '/medical-student-question-jess' => redirect('/posts/medical-student-question-jess')
   get '/medical-school-early-decision' => redirect('/posts/medical-school-early-decision')
   get '/5-reasons-social-media-good-pre-meds' => redirect('/posts/5-reasons-social-media-good-pre-meds')
-  get '/content' => redirect('/posts/content')
-  get '/welcome' => redirect('/posts/welcome')
+  get '/content' => redirect('/posts/new-content')
+  get '/welcome' => redirect('/posts/welcome-to-premed-roadmap')
 
   get '/high-school-to-medical-school' => redirect('/pages/high-school-to-medical-school')
   get '/high-school-to-medical-school/is-medicine-for-me' => redirect('/pages/is-medicine-for-me')
