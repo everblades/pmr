@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
+
   # GET /posts
   # GET /posts.json
   def index
@@ -12,6 +13,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+
   end
 
   # GET /posts/new

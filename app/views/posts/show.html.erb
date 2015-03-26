@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% @title= @post.title %>
+<% description @post.excerpt %>
 
     <% if @post.photo? %>
       <%= image_tag @post.photo.url(:medium) %>

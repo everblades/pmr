@@ -64,3 +64,5 @@ gem 'newrelic_rpm'
 gem 'sitemap_generator'
 
 gem 'fog'
+
+gem 'meta-tags'
