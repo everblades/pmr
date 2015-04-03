@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/sitemap.xml.gz' => 'sitemaps#show'
 
   root to: 'pages#home'
-
+  
   get '/blog' => redirect('posts#show')
   get '/posts' => 'posts#show'
   get '/smart-money-spending-guide-for-college-students' => redirect('/posts/smart-money-spending-guide-for-college-students')
