@@ -26,8 +26,12 @@
   </script>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+<% if notice %>
+    <p class="notice"><%= notice %></p>
+<% elsif alert %>
+    <p class="alert"><%= alert %></p>
+<% end %>
 
 <header>
   <!--
@@ -103,8 +107,7 @@
               <%= link_to(image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo'), 'https://www.facebook.com/premedroadmap', :target => '_blank') %></div>
             <div class="twitter">
               <p>Follow Us On Twitter</p>
-              <%= link_to(image_tag('Twitter_logo_white.png', :alt=> 'Twitter Logo'), 'https://twitter.com/premedroadmap', :target => '_blank') %></div>
-        </div>
+              <a href="https://twitter.com/PreMedRoadmap" class="twitter-follow-button" data-show-count="false">Follow @PreMedRoadmap</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>        </div>
         <% unless current_page?(root_path) %>
           <div class="adcontainer">
               <p>Ads Support Our Site</p>

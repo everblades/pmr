@@ -59,7 +59,9 @@ a:active{
     color: #FFFFFF;
 }
 
-
+h1 {
+    line-height: 1;
+}
 /**********************
 HEADER
 **********************/
