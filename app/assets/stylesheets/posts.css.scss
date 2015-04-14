@@ -8,6 +8,14 @@ img{
   margin: 0 1% 1% 0;
 }
 
+figcaption {
+  font-style: italic;
+  float: left;
+  clear: left;
+  width: 300px;
+  margin: 0 1% 1% 0;
+}
+
 article{
   margin: 0 auto;
 }
@@ -46,9 +54,3 @@ article{
   color: white;
   border: 1px solid #2e6ab1; }
 
-figcaption {
-  font-style: italic;
-  float: left;
-  clear: left;
-  width: 300px;
-}

@@ -1,11 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <% @title= @post.title %>
-<% description @post.excerpt %>
 
     <% if @post.photo? %>
         <figure>
-            <%= image_tag @post.photo.url(:medium) %>
+            <%= image_tag @post.photo.url(:medium), alt: @post.caption %>
             <figcaption>
               <%= @post.caption %>
             </figcaption>

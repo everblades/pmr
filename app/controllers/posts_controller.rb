@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
-
   # GET /posts
   # GET /posts.json
   def index
@@ -13,6 +12,14 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    set_meta_tags :description => @post.excerpt,
+                  :og => {
+                      :title    => @post.title,
+                      :type     => 'article',
+                      :url      => request.original_url,
+                      :image    => @post.photo.url,
+                      :description => @post.excerpt
+                  }
 
   end
 

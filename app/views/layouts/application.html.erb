@@ -3,12 +3,12 @@
 <head>
   <title>
     <% if @title %>
-    <%= @title %> | PreMed Roadmap
+        <%= @title %> | PreMed Roadmap
     <% else %>
-    PreMed Roadmap: Find Your Path to Medical School
+        PreMed Roadmap: Find Your Path to Medical School
     <% end %>
-    </title>
-  <%= display_meta_tags %>
+  </title>
+  <%= display_meta_tags :og => { :site_name => 'PreMed Roadmap'} %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true %>
   <%= csrf_meta_tags %>
