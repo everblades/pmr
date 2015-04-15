@@ -95,7 +95,9 @@
 
 <div id="page">
     <article>
-        <%= yield %>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+
+      <%= yield %>
     </article>
 
     <aside>
