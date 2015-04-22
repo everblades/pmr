@@ -21,9 +21,9 @@
       <strong>Author:</strong>
       <%= @post.user.username %>
     </p>
+    <br>
 
-    <p id="body">
-      <%= sanitize @post.body %>
-    </p>
+    <%= sanitize @post.body, attributes: %w(href target) %>
+
 
 

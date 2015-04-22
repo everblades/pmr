@@ -21,9 +21,7 @@ GENERAL
 
 body {
     background: #F7F7F7;
-    display: flex;
     min-height: 80vh;
-    flex-direction: column;
 }
 
 #page {
@@ -173,7 +171,7 @@ nav ul li ul {
         text-align: left;
         display: inline;
         margin: 0;
-        padding: 15px 4px 17px 0;
+        padding: 15px 4px 17px 10px;
         list-style: none;
     }
 
@@ -187,7 +185,7 @@ nav ul li ul {
     }
 
     nav ul li a {
-        padding: 15px 20px;
+        padding: 15px 8px;
         display: block;
     }
 
@@ -228,9 +226,7 @@ nav ul li ul {
         position: absolute; left: 100%; top:0;
     }
 
-    .firstli {
-        margin-left: 20px;
-    }
+
 
 }
 
@@ -254,49 +250,57 @@ article {
 SIDEBAR
 **********************/
 
-aside {
+#asidecontainer {
     -webkit-flex: 1 6 20%;
     flex: 1 6 20%;
     -webkit-order: 3;
     order: 3;
-    background: #CEE3F6;
     margin: 1% 5% 2% 1%;
-    border-radius: 10px;
     padding: 1%;
 }
 
-.adcontainer {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    text-decoration: underline;
-    clear: both;
+#asideflexcontainer {
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
 }
 
 .social {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    text-decoration: underline;
+    background: #CEE3F6;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 2% 0;
+}
+
+.social a {
+    display: inline-block;
+    clear: both;
 }
 
 .g-plusone {
-    display: block;
+    display: inline-block;
     clear: both;
+}
+
+.usercontainer {
+    background: #CEE3F6;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2% 0;
+}
+
+.adcontainer {
+    background: #CEE3F6;
+    border-radius: 10px;
+    padding: 1%;
+    text-decoration: underline;
     text-align: center;
 }
 
-.facebook{
-    display: block;
-    clear: both;
-    text-align: center;
-}
 
-.twitter {
-    display: block;
-    clear: both;
-    text-align: center;
-}
 /**********************
 FOOTER
 **********************/

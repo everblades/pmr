@@ -3,6 +3,7 @@
 
 <h1>Blog</h1>
 <% @posts.each do |post| %>
+    <hr>
 <% if post.photo? %>
   <%= image_tag post.photo.url(:thumb) %><br>
 <% end %>

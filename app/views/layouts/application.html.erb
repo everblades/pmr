@@ -8,6 +8,9 @@
         PreMed Roadmap: Find Your Path to Medical School
     <% end %>
   </title>
+  <% if current_page?(root_path) %>
+      <meta content="PreMed Roadmap is a website created by a medical student to help premed students navigate the medical school admissions process." name="description" />
+  <% end %>
   <%= display_meta_tags :og => { :site_name => 'PreMed Roadmap'} %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true %>
@@ -95,23 +98,29 @@
 
 <div id="page">
     <article>
-      <!--
-      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-      -->
       <%= yield %>
     </article>
-
-    <aside>
-        <div class="social">
-              <p>Google +1 Us</p>
+    <div id="asidecontainer">
+      <div id="asideflexcontainer">
+        <aside>
+          <div class="social">
               <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="240"></div>
-            <div class="facbook">
-              <p>Like Us On Facebook</p>
-              <%= link_to(image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo'), 'https://www.facebook.com/premedroadmap', :target => '_blank') %></div>
-            <div class="twitter">
-              <p>Follow Us On Twitter</p>
-              <a href="https://twitter.com/PreMedRoadmap" class="twitter-follow-button" data-show-count="false">Follow @PreMedRoadmap</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>        </div>
-        <% unless current_page?(root_path) %>
+              <%= link_to(image_tag('FB-f-Logo__blue_29.png', :alt=> 'Facebook Logo'), 'https://www.facebook.com/premedroadmap', :target => '_blank') %>
+              <a href="https://twitter.com/PreMedRoadmap" class="twitter-follow-button" data-show-count="false">Follow @PreMedRoadmap</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
+          <!--
+          <div class="usercontainer">
+            <% if !user_signed_in? %>
+                <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+            <% else %>
+                <p>Welcome <%= current_user.name %>!</p>
+                <p><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></p>
+                <p>My Profile</p>
+                <p>My Point Balance:</p>
+                <p>Earn Points | Enter Drawings</p>
+            <% end %>
+          </div>
+          -->
           <div class="adcontainer">
               <p>Ads Support Our Site</p>
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -125,8 +134,9 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
           </div>
-              <% end %>
-    </aside>
+        </aside>
+      </div>
+    </div>
 </div>
     <footer>
       &copy; 2015 PreMed Roadmap
