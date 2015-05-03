@@ -239,8 +239,8 @@ article {
     border-radius: 10px;
     margin: 1% 0 2% 5%;
     padding: 1%;
-    -webkit-flex: 3 1 60%;
-    flex: 3 1 60%;
+    -webkit-flex: 2 1 50%;
+    flex: 2 1 50%;
     -webkit-order: 2;
     order: 2;
 }
@@ -251,8 +251,8 @@ SIDEBAR
 **********************/
 
 #asidecontainer {
-    -webkit-flex: 1 6 20%;
-    flex: 1 6 20%;
+    -webkit-flex: 1 6 30%;
+    flex: 1 6 30%;
     -webkit-order: 3;
     order: 3;
     margin: 1% 5% 2% 1%;

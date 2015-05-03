@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :users, only: [:show, :edit, :update]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
 
   resources :pages
   resources :posts
+  resources :topics
   resources "contacts", only: [:new, :create]
 
   get '/sitemap.xml.gz' => 'sitemaps#show'

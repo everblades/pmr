@@ -5,7 +5,7 @@
 Last Updated: <%= @page.updated_at.strftime("%m/%d/%y") %>
 </p>
 
-<p><%= sanitize @page.body %></p>
+<p><%= sanitize @page.body, attributes: %w(href target) %></p>
 
 
 
