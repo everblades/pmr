@@ -4,3 +4,10 @@
 
 <%= link_to('Edit', edit_topic_path(@topic)) %>
 <%= link_to('Delete', topic_path(@topic), method: :delete, data: { confirm: "Are you sure?" }) %>
+
+<h2><%= @topic.comments.count %> Comments</h2>
+
+<%= render @topic.comments %>
+
+<h3>Reply to thread</h3>
+<%= render "comments/form" %>

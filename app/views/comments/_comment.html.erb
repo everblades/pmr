@@ -1,0 +1,4 @@
+<p><%= comment.comment %></p>
+<p><%= comment.user.name %></p>
+<p><%= link_to("Edit Reply", edit_topic_comment_path(comment.topic, comment)) %></p>
+<p><%= link_to("Delete Reply", [comment.topic, comment], method: :delete, data: { confirm: "Are you sure"}) %></p>

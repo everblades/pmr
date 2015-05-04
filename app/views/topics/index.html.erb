@@ -1,1 +1,8 @@
 <h1>Index placeholder</h1>
+
+<% @topics.each do |topic| %>
+    <%= link_to(topic.title, topic_path(topic)) %><br>
+    Date: <%= topic.created_at.strftime("%m/%d/%y") %><br>
+<% end %>
+
+<%= link_to('New Topic', new_topic_path) %>

@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  has_many :topics
+
+  has_many :comments
+
   has_attached_file :avatar, styles: {:square => "50x50#"}
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
