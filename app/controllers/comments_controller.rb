@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :user_allowed, only: [:edit, :update, :destroy]
+
   def create
     @topic = Topic.find(params[:topic_id])
     @comment = @topic.comments.create(params[:comment].permit(:comment))
-    @comment.user= current_user
+    @comment.user = current_user
 
     if @comment.save
       redirect_to topic_path(@topic)
@@ -31,6 +34,16 @@ class CommentsController < ApplicationController
       redirect_to topic_path(@topic)
     else
       render 'edit'
+    end
+  end
+
+  private
+
+  def user_allowed
+    @topic = Topic.find(params[:topic_id])
+    @comment = @topic.comments.find(params[:id])
+    unless @comment.user == current_user
+      redirect_to(topic_path(@topic), notice: 'You are not authorized to perform that action')
     end
   end
 

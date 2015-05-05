@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   before_action :find_topic, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
+  before_action :user_allowed, only: [:edit, :update, :destroy]
 
   def index
     @topics = Topic.all.order("created_at DESC")
@@ -37,8 +38,8 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic.destroy
-    redirect_to topics_path
+      @topic.destroy
+      redirect_to topics_path
   end
 
   private
@@ -50,4 +51,11 @@ class TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:title, :content)
   end
+
+  def user_allowed
+    unless @topic.user == current_user
+      redirect_to(topic_path, notice: 'You are not authorized to perform that action')
+    end
+  end
+
 end
